@@ -1,0 +1,13 @@
+timestamp,tick,device_id,severity,category,message
+2026-11-20T21:59:31.760,0,-,INFO,SYSTEM,"Environment reset (SCEN-002): 4 virtual devices ONLINE, dummy files restored."
+2026-11-20T21:59:31.799,10,-,INFO,TRAFFIC,Normal simulation: 10 windows generated for all devices
+2026-11-20T21:59:33.233,11,PLC-01,HIGH,ATTACK,Safe ransomware-like SIMULATION started on PLC-01 (dummy files only)
+2026-11-20T21:59:33.403,12,PLC-01,HIGH,ALERT,"HIGH risk: RANSOMWARE_LIKE p=1.000, criticality=HIGH. Top features: file_rename_rate (z=10.57), failed_connection_rate (z=13.19), device_activity_score (z=9.12)"
+2026-11-20T21:59:33.404,12,PLC-01,HIGH,APPROVAL,Quarantine of PLC-01 requested - waiting for analyst approval
+2026-11-20T21:59:33.426,12,PLC-01,HIGH,RESPONSE,PLC-01 QUARANTINED (virtual only) - approved by analyst (scripted approval). High ransomware-like risk (approved)
+2026-11-20T21:59:33.437,13,PLC-01,MEDIUM,BLOCKED,"[BLOCKED_BY_QUARANTINE] Blocked 36 simulated outbound connections (326,699 bytes) from quarantined PLC-01"
+2026-11-20T21:59:33.539,14,PLC-01,MEDIUM,BLOCKED,"[BLOCKED_BY_QUARANTINE] Blocked 39 simulated outbound connections (375,830 bytes) from quarantined PLC-01"
+2026-11-20T21:59:33.719,15,PLC-01,MEDIUM,BLOCKED,"[BLOCKED_BY_QUARANTINE] Blocked 17 simulated outbound connections (491,491 bytes) from quarantined PLC-01"
+2026-11-20T21:59:33.792,16,PLC-01,MEDIUM,BLOCKED,"[BLOCKED_BY_QUARANTINE] Blocked 25 simulated outbound connections (342,380 bytes) from quarantined PLC-01"
+2026-11-20T21:59:33.861,17,PLC-01,MEDIUM,BLOCKED,"[BLOCKED_BY_QUARANTINE] Blocked 26 simulated outbound connections (317,973 bytes) from quarantined PLC-01"
+2026-11-20T21:59:33.930,18,PLC-01,MEDIUM,BLOCKED,"[BLOCKED_BY_QUARANTINE] Blocked 39 simulated outbound connections (476,234 bytes) from quarantined PLC-01"

@@ -1,0 +1,99 @@
+{
+  "target": "PLC-01",
+  "severity": 0.7,
+  "seed": 42,
+  "scenario_id": "SCEN-002",
+  "stage1_normal": {
+    "windows_assessed": 40,
+    "predicted_ransomware_like": 0,
+    "max_probability": 0.0513,
+    "alerts": 0,
+    "expected": "NORMAL",
+    "result": "NORMAL",
+    "per_device_latest": {
+      "CAM-01": {
+        "cls": "NORMAL",
+        "prob": 0.0,
+        "risk": "LOW"
+      },
+      "TEMP-01": {
+        "cls": "NORMAL",
+        "prob": 0.0,
+        "risk": "LOW"
+      },
+      "PLC-01": {
+        "cls": "NORMAL",
+        "prob": 0.0,
+        "risk": "LOW"
+      },
+      "GW-01": {
+        "cls": "NORMAL",
+        "prob": 0.0067,
+        "risk": "LOW"
+      }
+    }
+  },
+  "stage2_attack": {
+    "onset_tick": 11,
+    "files_renamed": 4,
+    "note_present": true
+  },
+  "stage3_detection": {
+    "predicted_class": "RANSOMWARE_LIKE",
+    "probability": 1.0,
+    "risk_level": "HIGH",
+    "timestamp": "2026-11-20T21:59:33.403",
+    "top_features": [
+      {
+        "feature": "file_rename_rate",
+        "value": 19.783,
+        "normal_mean": 0.723,
+        "z_score": 10.57,
+        "importance": 0.4536,
+        "rank_score": 4.794
+      },
+      {
+        "feature": "failed_connection_rate",
+        "value": 0.1393,
+        "normal_mean": 0.015,
+        "z_score": 13.19,
+        "importance": 0.2846,
+        "rank_score": 3.752
+      },
+      {
+        "feature": "device_activity_score",
+        "value": 19.923,
+        "normal_mean": 6.237,
+        "z_score": 9.12,
+        "importance": 0.0937,
+        "rank_score": 0.854
+      }
+    ],
+    "inference_ms": 19.275,
+    "first_flagged_tick": 11,
+    "high_alert_tick": 12
+  },
+  "stage4_prevention": {
+    "approved": true,
+    "quarantine_tick": 12,
+    "status": "QUARANTINED",
+    "blocked_events_before_quarantine": 0,
+    "blocked_events_after": 182,
+    "blocked_bytes_after": 2330607
+  },
+  "stage5_effectiveness": {
+    "normal_mean_outbound_bytes": 117719,
+    "normal_mean_connections": 10.9,
+    "attack_mean_outbound_bytes": 400377,
+    "attack_mean_file_rename_rate": 19.6,
+    "delivered_outbound_bytes_before_quarantine": 800754,
+    "delivered_outbound_bytes_after_quarantine": 0,
+    "attempted_outbound_bytes_after_quarantine": 2330607,
+    "blocked_events": 182,
+    "detection_delay_windows": 2,
+    "detection_delay_simulated_seconds": 10,
+    "other_devices_false_alarms": 0,
+    "files_renamed_in_sandbox": 20
+  },
+  "note": "Synthetic simulation only. Detection delay is counted in telemetry windows (5 simulated seconds each); human approval time is not included."
+}

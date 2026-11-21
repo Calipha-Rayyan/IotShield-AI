@@ -1,0 +1,25 @@
+SAFE SIMULATION ONLY – NO REAL RANSOMWARE IS RUNNING.
+
+STAGE 1 - Normal environment: expected NORMAL -> NORMAL (max p=0.0513, alerts=0)
+STAGE 2 - Safe attack launched on PLC-01 at window 11; dummy files renamed so far: 4
+STAGE 3 - AI detection: RANSOMWARE_LIKE p=1.0 risk=HIGH at 2026-11-17T03:52:14.554 (inference 10.785 ms)
+          feature file_rename_rate: value=19.783 normal~0.723 z=10.57
+          feature failed_connection_rate: value=0.1393 normal~0.015 z=13.19
+          feature device_activity_score: value=19.923 normal~6.237 z=9.12
+STAGE 4 - Prevention: PLC-01 status = QUARANTINED (approved=True), blocked simulated events after quarantine = 182
+STAGE 5 - Evidence:
+          normal_mean_outbound_bytes: 117719
+          normal_mean_connections: 10.9
+          attack_mean_outbound_bytes: 400377
+          attack_mean_file_rename_rate: 19.6
+          delivered_outbound_bytes_before_quarantine: 800754
+          delivered_outbound_bytes_after_quarantine: 0
+          attempted_outbound_bytes_after_quarantine: 2330607
+          blocked_events: 182
+          detection_delay_windows: 2
+          detection_delay_simulated_seconds: 10
+          other_devices_false_alarms: 0
+          files_renamed_in_sandbox: 20
+
+Synthetic simulation only. Detection delay is counted in telemetry windows (5 simulated seconds each); human approval time is not included.
+Results saved in /home/claude/IoTShield_AI/evidence/demo_results

@@ -1,0 +1,4 @@
+Normal phase (10 windows x 4 devices = 40 windows per run), seeds 1-25:
+- seeds with >=1 window-level false positive: 7 / 25
+- total flagged normal windows: 7 of 1000 (0.70%)
+- HIGH alerts (would trigger quarantine request) in normal phase: 0
