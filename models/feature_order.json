@@ -1,0 +1,10 @@
+[
+  "connection_count",
+  "unique_destinations",
+  "outbound_bytes",
+  "failed_connection_rate",
+  "file_write_rate",
+  "file_rename_rate",
+  "cpu_usage",
+  "device_activity_score"
+]
